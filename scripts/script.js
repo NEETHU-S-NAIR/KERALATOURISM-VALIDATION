@@ -31,15 +31,17 @@ function loginvalidation(){
         return false;
     }
 
+    if(!regexp.test(loginemail.value)){
+        error_message.innerText = "EMAIL ID IS IN INCORRECT FORMAT";   
+        return false; 
+    }
+
     if(!regpass.test(loginpwd.value)){
         error_message.innerText = "ENTER YOUR CORRECT PASSWORD";
         return false;
     }
 
-    if(!regexp.test(loginemail.value)){
-        error_message.innerText = "EMAIL ID IS IN INCORRECT FORMAT";   
-        return false; 
-    }
+    
       
 }
 
